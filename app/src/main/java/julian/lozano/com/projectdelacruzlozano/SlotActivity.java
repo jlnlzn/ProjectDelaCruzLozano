@@ -34,14 +34,8 @@ public class SlotActivity extends AppCompatActivity {
 
         initializeViews();
 
-        btnBackHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent toHome = new Intent(SlotActivity.this, HomeActivity.class);
-                startActivity(toHome);
-            }
-        });
     }
+
 
     private void initializeViews() {
         btnToContact.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +60,14 @@ public class SlotActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(SlotActivity.this, "Complete the details.", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        btnBackHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backHome = new Intent(SlotActivity.this, HomeActivity.class);
+                startActivity(backHome);
+                finish();
             }
         });
     }

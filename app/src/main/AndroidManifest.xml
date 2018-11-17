@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="julian.lozano.com.projectdelacruzlozano">
 
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,14 +23,15 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".ContactActivity" />
+        <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SlotActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".ContactActivity" />
         <activity android:name=".VacantActivity" />
         <activity android:name=".OccupiedActivity" />
         <activity android:name=".VacateConfirmActivity" />
-        <activity android:name=".SendEmail"></activity>
+        <activity android:name=".SendEmail" />
+        <activity android:name=".SendSMS"></activity>
     </application>
 
 </manifest>
