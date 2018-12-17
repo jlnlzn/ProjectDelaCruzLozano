@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/rectangle_at_the_top"
+        android:layout_width="211dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="150dp"
+        android:background="@android:color/holo_blue_bright"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/slot1"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/green"
+        android:text="1" />
+    <Button
+        android:id="@+id/slot2"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_below="@id/slot1"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/green"
+        android:text="2" />
+
+    <Button
+        android:id="@+id/slot3"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/slot2"
+        android:background="@color/green"
+        android:text="3" />
+    <Button
+        android:id="@+id/slot4"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/slot3"
+        android:background="@color/green"
+        android:text="4" />
+    <Button
+        android:id="@+id/slot5"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@id/slot4"
+        android:background="@color/green"
+        android:text="5" />
+    <Button
+        android:id="@+id/slot6"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@id/slot5"
+        android:background="@color/green"
+        android:text="6" />
+    <Button
+        android:id="@+id/slot7"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/slot4"
+        android:background="@color/green"
+        android:text="7" />
+    <Button
+        android:id="@+id/slot8"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="402dp"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@id/slot7"
+        android:background="@color/green"
+        android:text="8" />
+    <Button
+        android:id="@+id/slot9"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="402dp"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@id/slot8"
+        android:background="@color/green"
+        android:text="9" />
+
+    <Button
+        android:id="@+id/slott1"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/red"
+        android:text="1" />
+    <Button
+        android:id="@+id/slott2"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_below="@id/slot1"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/red"
+        android:text="2" />
+
+    <Button
+        android:id="@+id/slott3"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/slot2"
+        android:background="@color/red"
+        android:text="3" />
+    <Button
+        android:id="@+id/slott4"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/slot3"
+        android:background="@color/red"
+        android:text="4" />
+    <Button
+        android:id="@+id/slott5"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@id/slot4"
+        android:background="@color/red"
+        android:text="5" />
+    <Button
+        android:id="@+id/slott6"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@id/slot5"
+        android:background="@color/red"
+        android:text="6" />
+    <Button
+        android:id="@+id/slott7"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/slot4"
+        android:background="@color/red"
+        android:text="7" />
+    <Button
+        android:id="@+id/slott8"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="402dp"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@id/slot7"
+        android:background="@color/red"
+        android:text="8" />
+    <Button
+        android:id="@+id/slott9"
+        android:layout_width="101dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="402dp"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@id/slot8"
+        android:background="@color/red"
+        android:text="9" />
+</RelativeLayout>
