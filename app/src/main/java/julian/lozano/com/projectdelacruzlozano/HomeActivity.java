@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,8 +28,8 @@ public class HomeActivity extends AppCompatActivity {
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
 
-        btnSlot1 = findViewById(R.id.slot1);
-        btnSlott1 =findViewById(R.id.slott1);
+        btnSlot1 = findViewById(R.id.slott1);
+
 
 
         slots();
@@ -42,44 +43,20 @@ public class HomeActivity extends AppCompatActivity {
                         Boolean value = dataSnapshot.getValue(Boolean.class);
                         if (value.equals(false)) {
                             dataSnapshot.getRef().setValue(true);
-                            btnSlot1.setVisibility(View.INVISIBLE);
-                            btnSlott1.setVisibility(View.VISIBLE);
-//                            colorRed();
-//                            Intent toVacant = new Intent(HomeActivity.this, VacantActivity.class);
-//                            startActivity(toVacant);
-                       }
-                    }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
-            }
-        });
-        btnSlott1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mDatabaseReference = mFirebaseDatabase.getReference("ParkingSlot");
-
-                mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        Boolean value = dataSnapshot.getValue(Boolean.class);
-                        if(value.equals(true)) {
+                       }else if(value.equals(true)){
                             dataSnapshot.getRef().setValue(false);
-                            btnSlot1.setVisibility(View.VISIBLE);
-                            btnSlott1.setVisibility(View.INVISIBLE);
                         }
                     }
+
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
                     }
                 });
-                slots();
             }
         });
+
     }
 
 
@@ -89,13 +66,13 @@ public class HomeActivity extends AppCompatActivity {
         mDatabaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
+                Boolean value = dataSnapshot.getValue(Boolean.class);
                 if(value.equals(true)) {
-                    btnSlot1.setVisibility(View.VISIBLE);
-                    btnSlott1.setVisibility(View.INVISIBLE);
+                   colorGreen();
+
                 } else if (value.equals(false)) {
-                    btnSlot1.setVisibility(View.INVISIBLE);
-                    btnSlott1.setVisibility(View.VISIBLE);
+                    colorRed();
+
                 }
             }
 
